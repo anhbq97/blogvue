@@ -49,4 +49,33 @@ class PostController extends Controller
 
         return response()->json($response);
     }
+
+    public function view(Request $request, $id)
+    {
+        $response = [
+            'data' => [],
+            'message' => 'Something Wrong!',
+            'status' => false,
+        ];
+
+        try {
+            $post = Post::select('posts.id as post_id', 'posts.title', 'posts.summary', 'posts.status_id', 'posts.category_id', 'posts.image', 'posts.content', 'posts.created_at',
+            'users.name as user_name')
+            ->join('users', 'posts.user_id', '=', 'users.id')
+            ->where('posts.id', $id)
+            ->first();
+            $post['category_id'] = json_decode($post['category_id']);
+            $categories = PostCategories::all('id', 'name')->keyBy('id');
+
+            if ($post) {
+                $response['data'] = $post;
+                $response['message'] = 'Get Post success';
+                $response['status'] = true;
+            }
+        } catch (\Exception $e) {
+            echo 'Something Error in' . $e->getMessage() . "\n";
+        }
+        
+        return response()->json($response);
+    }
 }

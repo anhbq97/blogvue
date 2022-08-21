@@ -1,8 +1,7 @@
 <template>
-
         <div class="card box-post">
             <router-link :to="{name: 'ReadPost', params: {id: post.post_id}}">
-                <img class="card-img-top" width="360" height="360" :src="'http://blogvue.local/storage/images/' + post.image" alt="">
+                <img class="card-img-top" width="360" height="360" :src="'/storage/images/' + post.image" alt="">
             </router-link>
             <div class="card-body">
                 <div class="card-info">
@@ -21,17 +20,9 @@
 <script>
     export default {
         props: ['post'],
-        // methods: {
-        //     getPost(post_id) {
-        //         axios.get('api/posts?page=' + page).then(response => {
-        //             this.posts = response.data.data.data,
-        //             this.pagination = response.data.pagination
-        //             this.isActived();
-        //             this.pagesNumber();
-        //         })
-        //         .catch(error => {
-        //             console.log(error);
-        //         })
+        // data: function () {
+        //     return {
+        //         'APP_URL_LOCAL': ''
         //     }
         // }
     }
