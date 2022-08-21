@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-6">
-            <b class="name-footer"><small>Poor</small><i class="fa-solid fa-c" style="font-size: 15px;"></i><i class="fa-solid fa-l" style="font-size: 15px;"></i><i class="fa-solid fa-u" style="font-size: 15px;"></i></b>
+            <b class="name-footer"><small>PoorCLU</small><i class="fa-solid fa-c" style="font-size: 15px;"></i><i class="fa-solid fa-l" style="font-size: 15px;"></i><i class="fa-solid fa-u" style="font-size: 15px;"></i></b>
             <strong class="description-footer">@2022 Thiết kế và phát triển bởi Tác giả.</strong>
         </div>
         <div class="col-md-3">

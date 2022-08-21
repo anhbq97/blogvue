@@ -1,86 +1,49 @@
-<template>
-<div class="site-wrapper">
-  <div class="header-wrap">
-    <div class="container">
-      <div class="row">
-        <header class="header-default">
-          <nav class="navbar-menu">
-              <!-- logo  -->
-              <div class="navbar-logo">
-                  <a href="#/" class="navbar-brand d-lg-inline-block d-md-inline-block">
-                      <small>Poor</small><i class="fa-solid fa-c" style="font-size: 15px;"></i><i class="fa-solid fa-l" style="font-size: 15px;"></i><i class="fa-solid fa-u" style="font-size: 15px;"></i>
-                  </a>
-                  <small>| WRITE MY LIFE</small>
-              </div>
-
-              <button type="button" class="icon-bar-mobile"><span class="fa-solid fa-bars"></span></button>
-
-              <div class="navbar-list" id="navbar-menu">
-                  <ul class="navbar-items">
-                      <li class="nav-item">
-                          <a href="#/about">Giới thiệu</a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="javascript:void(0)">Review <i class="fa-solid fa-angle-right" id="icon-menu"></i></a>
-                          <ul class="sub-items">
-                              <li><a href="javascript:void(0)">Trò chơi</a></li>
-                              <li><a href="javascript:void(0)">Phim</a></li>
-                              <li><a href="javascript:void(0)">Sách</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a href="javascript:void(0)">Tools & Tips <i class="fa-solid fa-angle-right" id="icon-menu"></i></a>
-                          <ul class="sub-items">
-                              <li><a href="javascript:void(0)">Excel</a></li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a href="javascript:void(0)">Liên Hệ</a>
-                      </li>
-                  </ul>
-              </div>
-          </nav>
-        </header>
-      </div>
-    </div>
-  </div>
-
-  <component :is="currentView" />
-</div>
-
-</template>
-
 <script>
 import Login from '../auth/login.vue'
 import About from '../pages/about.vue'
 import Register from '../auth/register.vue'
 import Home from '../home/index.vue'
 import NotFound from '../pages/notFound.vue'
+import ReadPost from '../home/includes/readPost.vue'
+import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = {
-  '/': Home,
-  '/about': About,
-  '/login': Login,
-  '/register': Register
-}
+const routes = [
+  { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '/login', component: Login },
+  { path: '/register', component: Register },
+  { path: '/post/:id', name: 'ReadPost', component: ReadPost },
+]
 
-export default {
-  data() {
-    return {
-      currentPath: window.location.hash
-    }
-  },
-  components: {
-  },
-  computed: {
-    currentView() {
-      return routes[this.currentPath.slice(1) || '/'] || NotFound
-    }
-  },
-  mounted() {
-    window.addEventListener('hashchange', () => {
-		  this.currentPath = window.location.hash
-		})
-  }
-}
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+// const routes = {
+//   '/': Home,
+//   '/about': About,
+//   '/login': Login,
+//   '/register': Register,
+//   '/post/:id?': ReadPost
+// }
+
+// export default {
+  // data() {
+  //   return {
+  //     currentPath: window.location.hash
+  //   }
+  // },
+  // computed: {
+  //   currentView() {
+  //     return routes[this.currentPath.slice(1) || '/'] || NotFound
+  //   }
+  // },
+  // mounted() {
+  //   window.addEventListener('hashchange', () => {
+	// 	  this.currentPath = window.location.hash
+	// 	})
+  // }
+// }
 </script>
