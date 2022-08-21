@@ -5,15 +5,18 @@
             </router-link>
             <div class="card-body">
                 <div class="card-info">
-                    <small class="card-tag">{{ post.title }}
-                        - 
-                    {{ post.created_at }}</small>
+                    <small>Ngày tạo: {{ post.created_at }}</small>
                     <small class="card-author"><i class="fa-solid fa-user"></i>{{ post.user_name }}</small>
                     <div class="clearfix"></div>
                 </div>
-                <p class="card-title"><a href="">{{ post.title }}</a></p>
+                <p class="card-title">
+                    <router-link :to="{name: 'ReadPost', params: {id: post.post_id}}" class="card-tag">
+                        {{ post.title }}
+                    </router-link></p>
                 <p class="card-summary">{{ post.summary }}</p>
-                <p class="card-readmore"><a href="">Đọc tiếp <i class="fa-solid fa-angles-right"></i></a></p>
+                <p class="card-readmore">
+                    <router-link :to="{name: 'ReadPost', params: {id: post.post_id}}">Đọc tiếp <i class="fa-solid fa-angles-right"></i></router-link>
+                </p>
             </div>
         </div>
 </template>

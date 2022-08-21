@@ -11,7 +11,7 @@
                       <small>PoorCLU</small><i class="fa-solid fa-c" style="font-size: 15px;"></i><i class="fa-solid fa-l" style="font-size: 15px;"></i><i class="fa-solid fa-u" style="font-size: 15px;"></i>
                   </a> -->
                   <router-link to="/" class="navbar-brand d-lg-inline-block d-md-inline-block">
-                    <small>PoorCLU</small><i class="fa-solid fa-c" style="font-size: 15px;"></i><i class="fa-solid fa-l" style="font-size: 15px;"></i><i class="fa-solid fa-u" style="font-size: 15px;"></i>
+                    <small>PoorCLU</small>
                   </router-link>
                   <small>- WRITE MY LIFE</small>
               </div>

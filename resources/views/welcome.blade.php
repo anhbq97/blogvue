@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/blog_home.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/fontawesome-free-6.0.0-web/css/all.min.css') }}" type="text/css">
     </head>
     <body style="font-family: 'Nunito', sans-serif">
         <div id="app">
@@ -17,6 +18,8 @@
     </body>
 
     <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-
+    <script src="{{ asset('js/blog_home.js') }}"></script>
+    <script src="{{ asset('js/blog_view.js') }}"></script>
 </html>
