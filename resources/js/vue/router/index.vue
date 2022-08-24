@@ -1,6 +1,6 @@
 <script>
 import Login from '../auth/login.vue'
-import About from '../pages/about.vue'
+import About from '../home/about.vue'
 import Register from '../auth/register.vue'
 import Home from '../home/index.vue'
 import NotFound from '../pages/notFound.vue'
