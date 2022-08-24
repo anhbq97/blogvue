@@ -15,10 +15,17 @@ use App\Http\Controllers\API;
 |
 */
 
+
 // Route::post('/register', [API\AuthController::class, 'register']);
 Route::get('/posts', [Api\PostController::class, 'index']);
 Route::get('/post/{id}', [Api\PostController::class, 'view']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::middleware('auth:sanctum')->group(function () {
+
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::get('/logout', [AuthController::class, 'logout']);
 });

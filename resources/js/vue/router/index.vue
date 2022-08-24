@@ -13,6 +13,7 @@ const routes = [
   { path: '/login', component: Login },
   { path: '/register', component: Register },
   { path: '/post/:id', name: 'ReadPost', component: ReadPost },
+  { path: '/:pathMatch(.*)*', component: NotFound },
 ]
 
 const router = createRouter({
@@ -21,29 +22,4 @@ const router = createRouter({
 })
 
 export default router
-// const routes = {
-//   '/': Home,
-//   '/about': About,
-//   '/login': Login,
-//   '/register': Register,
-//   '/post/:id?': ReadPost
-// }
-
-// export default {
-  // data() {
-  //   return {
-  //     currentPath: window.location.hash
-  //   }
-  // },
-  // computed: {
-  //   currentView() {
-  //     return routes[this.currentPath.slice(1) || '/'] || NotFound
-  //   }
-  // },
-  // mounted() {
-  //   window.addEventListener('hashchange', () => {
-	// 	  this.currentPath = window.location.hash
-	// 	})
-  // }
-// }
 </script>

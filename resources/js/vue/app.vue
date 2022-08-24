@@ -48,14 +48,13 @@
       </div>
     </div>
   </div>
-
-  <!-- <component :is="currentView" /> -->
-  <router-view></router-view>
 </div>
+<router-view></router-view>
+
 
 </template>
 
-<script>
+<!-- <script>
     import Router from './router/index'
 
     export default {
@@ -63,4 +62,4 @@
             // Router
         }
     }
-</script>
+</script> -->
