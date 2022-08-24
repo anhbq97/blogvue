@@ -6,7 +6,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <ul class="pagination">
+            <ul class="pagination" style="justify-content: center">
                 <li v-if="pagination.current_page > 1" class="page-item">
                     <a href="#" aria-label="Previous"
                         @click.prevent="changePage(pagination.current_page - 1)" class="page-link">
