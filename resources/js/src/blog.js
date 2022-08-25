@@ -26,14 +26,12 @@ var blog = {
           //Sự kiện click menu trên mobile
           $(document).on('click', '.icon-bar-mobile', function (event) {
             event.preventDefault();
-            console.log(event.target, event.currentTarget);
             $('.navbar-list').toggleClass('show');
           })
         } else if (global_width_screen > 768) { //PC Large
           $(window).scroll(function (event) {
             global_scroll = $(window).scrollTop();
-            console.log(global_scroll)
-      
+
             if (global_scroll) {
               global_header_wrap.addClass('header-wrap-fixed');
               global_main_body.addClass('main-body-content-fixed');
@@ -44,9 +42,6 @@ var blog = {
           });
         }
     },
-    test () {
-      
-    }
 }
 
 export default blog;
