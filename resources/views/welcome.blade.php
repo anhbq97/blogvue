@@ -8,8 +8,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/blog_home.css') }}">
         <link rel="stylesheet" href="{{ asset('css/fontawesome-free-6.0.0-web/css/all.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </head>
     <body style="font-family: 'Nunito', sans-serif">
         <div id="app">

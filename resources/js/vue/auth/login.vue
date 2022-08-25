@@ -1,9 +1,9 @@
 
 <template>
-    <div class="g-sidenav-show  bg-gray-100  ">
+    <div class="g-sidenav-show  bg-gray-100">
 <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
-            <div class="col-12">
+            <div class="col-md-12">
                 <Nav />
             </div>
         </div>
@@ -25,12 +25,12 @@
                     <label>Email</label>
                     <div class="mb-3">
                       <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="admin@softui.com" aria-label="Email" aria-describedby="email-addon">
-                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                        <p class="text-danger text-xs mt-2">{{ message }}</p>
                     </div>
                     <label>Password</label>
                     <div class="mb-3">
                       <input type="password" class="form-control" name="password" id="password" placeholder="Password" value="secret" aria-label="Password" aria-describedby="password-addon">
-                        <p class="text-danger text-xs mt-2">{{ $message }}</p>
+                        <p class="text-danger text-xs mt-2">{{ message }}</p>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" id="rememberMe" checked="">
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-6">
               <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
-                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('../assets/img/curved-images/curved6.jpg')"></div>
+                <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('./storage/images/curved-images/curved6.jpg')"></div>
               </div>
             </div>
           </div>
@@ -70,15 +70,13 @@
     import Nav from '../layouts/navbars/guest/nav.vue';
 
     export default {
+        data: function () {
+            return {
+                message: ''
+            }
+        },
         components: {
             Nav
         }
     }
 </script>
-
-<style scoped>
-/* @import '../../../themes/css/soft-ui-dashboard.css';
-@import '../../../themes/css/nucleo-icons.css';
-@import '../../../themes/css/nucleo-svg.css'; */
-
-</style>

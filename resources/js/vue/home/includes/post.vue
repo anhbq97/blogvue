@@ -1,7 +1,7 @@
 <template>
         <div class="card box-post">
             <router-link :to="{name: 'ReadPost', params: {id: post.post_id}}">
-                <img class="card-img-top" width="360" height="360" :src="'/storage/images/' + post.image" alt="">
+                <img class="card-img-top" width="360" height="360" v-lazy="'/storage/images/' + post.image" alt="">
             </router-link>
             <div class="card-body">
                 <div class="card-info">
