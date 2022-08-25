@@ -23,10 +23,5 @@
 <script>
     export default {
         props: ['post'],
-        // data: function () {
-        //     return {
-        //         'APP_URL_LOCAL': ''
-        //     }
-        // }
     }
 </script>

@@ -7,9 +7,6 @@
                 <nav class="navbar-menu">
                     <!-- logo  -->
                     <div class="navbar-logo">
-                        <!-- <a href="#/" class="navbar-brand d-lg-inline-block d-md-inline-block">
-                            <small>PoorCLU</small><i class="fa-solid fa-c" style="font-size: 15px;"></i><i class="fa-solid fa-l" style="font-size: 15px;"></i><i class="fa-solid fa-u" style="font-size: 15px;"></i>
-                        </a> -->
                         <router-link to="/" class="navbar-brand d-lg-inline-block d-md-inline-block">
                             <small>PoorCLU</small>
                         </router-link>
@@ -21,7 +18,6 @@
                     <div class="navbar-list" id="navbar-menu">
                         <ul class="navbar-items">
                             <li class="nav-item">
-                                <!-- <a href="#/about">Giới thiệu</a> -->
                                 <router-link to="/about">Giới thiệu</router-link>
                             </li>
                             <li class="nav-item">
@@ -53,6 +49,8 @@
 
 <script>
     export default {
-        
+       
     }
+
+    
 </script>

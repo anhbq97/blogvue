@@ -18,8 +18,5 @@
     </body>
 
     <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/blog_home.js') }}"></script>
-    <script src="{{ asset('js/blog_view.js') }}"></script>
 </html>
