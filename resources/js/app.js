@@ -1,8 +1,9 @@
 require('./bootstrap');
+import './jquery';
 
-import { createApp } from 'vue'
-import App from './vue/app'
-import router from './vue/router/index.vue'
+import { createApp } from 'vue';
+import App from './vue/app';
+import router from './vue/router/index.vue';
 
 // Make sure to _use_ the router instance to make the
 // whole app router-aware.

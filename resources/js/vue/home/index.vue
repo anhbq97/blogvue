@@ -16,9 +16,9 @@
 </template>
 
 <script>
+    import Menu from '../home/includes/menu.vue';
     import Posts from '../home/includes/posts.vue';
     import Footer from '../home/includes/footer.vue';
-    import Menu from '../home/includes/menu.vue';
     
     export default {
         components: {
