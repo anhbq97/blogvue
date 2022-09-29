@@ -14,12 +14,12 @@ const routes = [
   // BLOG
   { path: '/', component: Home, meta: { layout: 'LayoutBlog' },},
   { path: '/about', component: About, meta: { layout: 'LayoutBlog' },},
-  { path: '/login', component: Login, meta: { layout: 'LayoutBlog' }, },
-  { path: '/register', component: Register, meta: { layout: 'LayoutBlog' }, },
+  { path: '/login', component: Login, meta: { layout: 'LayoutAuth' }, },
+  { path: '/register', component: Register, meta: { layout: 'layoutAuth' }, },
   { path: '/post/:id', name: 'ReadPost', component: ReadPost, meta: { layout: 'LayoutBlog' }, },
 
   // ERROR
-  { path: '/:pathMatch(.*)*', component: NotFound },
+  { path: '/:pathMatch(.*)*', component: NotFound, meta: { layout: 'layoutAuth' },},
 
   // ADMIN
   { 
