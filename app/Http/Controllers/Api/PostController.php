@@ -24,6 +24,7 @@ class PostController extends Controller
             )
                 ->join('users', 'posts.user_id', '=', 'users.id')
                 ->join('posts_status', 'posts.status_id', '=', 'posts_status.id')
+                ->where('status_id', '=', 1)
                 ->orderBy('posts.created_at', 'desc')->paginate(6);
 
             $categories = PostCategories::all('id', 'name')->keyBy('id');
