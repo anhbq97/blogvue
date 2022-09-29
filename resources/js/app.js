@@ -2,7 +2,7 @@ require('./bootstrap');
 import './jquery';
 
 import { createApp } from 'vue';
-import App from './vue/app';
+import App from './vue/App';
 import router from './vue/router/index.vue';
 import lazyPlugin from 'vue3-lazy';
 

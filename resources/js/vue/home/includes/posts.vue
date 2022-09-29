@@ -28,9 +28,19 @@
 
 <script>
     import axios from 'axios';
-    import Post from './post.vue';
+    import Post from './Post.vue';
 
     export default {
+        name: 'Posts',
+        props: {
+            // this allows using the `value` prop for a different purpose
+            value: String,
+            // use `title` as the prop which take the place of `value`
+            email: {
+                type: String,
+                default: 'bquocanh.97@gmail.com'
+            }
+        },
         data: function () {
             return {
                 posts: [],

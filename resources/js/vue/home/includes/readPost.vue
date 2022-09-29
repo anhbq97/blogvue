@@ -1,5 +1,4 @@
 <template>
-<Menu />
 <main class="container px-xs-0" id="main-body-content">
     <div class="row px-xs-0">
         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -35,16 +34,11 @@
     
 </template>
 <script>
-    import Menu from './menu.vue';
-
     export default {
         data: function () {
             return {
                 post: [],
             }
-        },
-        components: {
-            Menu
         },
         created() {
             this.getPost(this.$route.params.id);

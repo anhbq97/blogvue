@@ -4,6 +4,8 @@
 /storage/*.key
 /vendor
 .env
+webpack.mix.js
+package-lock.json
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
