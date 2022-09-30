@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     </head>
     <body style="font-family: 'Nunito', sans-serif">
-        <div id="app">
+        <div id="app" style="height: 100%;">
             <app></app>
         </div>
     </body>

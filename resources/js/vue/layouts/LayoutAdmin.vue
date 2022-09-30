@@ -1,41 +1,101 @@
 <template>
-    <div class="nav-wrapper">
-        <div class="nav-header">
-
-        </div>
-
-        <div class="nav-slice"></div>
-
-        <div class="nav-body">
-            <div class="nav-body-header-module">
-                <p>Dashboard</p>
+    <div class="admin">
+        <div class="admin-nav-wrapper">
+            <div class="header">
+                <h5>CMS BLOG</h5>
             </div>
 
-            <ul class="navbar-items"> 
-                <li class="nav-item"><router-link to="/dashboard">Dashboard</router-link></li>
-            </ul>
-
-            <div class="nav-body-header-module">
-                <p>Setting</p>
+            <div class="slice">
+                <span></span>
             </div>
 
-            <ul class="navbar-items">
-                <li class="nav-item"><router-link to="/setting/profile">Profile</router-link></li>
-                <li class="nav-item"><router-link to="/setting/blog">Blog</router-link></li>
-            </ul>
+            <div class="body">
+                <div class="title-module">
+                    <p>Dashboard</p>
+                </div>
+
+                <ul class="items"> 
+                    <li class="item"><router-link to="/dashboard"><i class="fa-solid fa-house"></i> Dashboard</router-link></li>
+                </ul>
+
+                <div class="title-module">
+                    <p>Posts</p>
+                </div>
+
+                <ul class="items">
+                    <li class="item"><router-link to="/setting/blog"><i class="fa-solid fa-blog"></i> List</router-link></li>
+                    <li class="item"><router-link to="/setting/profile"><i class="fa-solid fa-plus"></i> Create</router-link></li>
+                </ul>
+
+                <div class="title-module">
+                    <p>Chat</p>
+                </div>
+
+                <ul class="items">
+                    <li class="item"><router-link to="/setting/blog"><i class="fa-solid fa-message"></i> List</router-link></li>
+                </ul>
+
+                <div class="title-module">
+                    <p>Notification</p>
+                </div>
+
+                <ul class="items">
+                    <li class="item"><router-link to="/setting/blog"><i class="fa-solid fa-bell"></i> List</router-link></li>
+                    <li class="item"><router-link to="/setting/profile"><i class="fa-solid fa-plus"></i> Create</router-link></li>
+                </ul>
+
+                <div class="title-module">
+                    <p>Setting</p>
+                </div>
+
+                <ul class="items">
+                    <li class="item"><router-link to="/setting/profile"><i class="fa-solid fa-user"></i> Profile</router-link></li>
+                    <li class="item"><router-link to="/setting/blog"><i class="fa-solid fa-gear"></i> Blog</router-link></li>
+                    <li class="item">
+                        <div class="logout">
+                            <p class="btn btn-danger">Logout</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <p>Designer and Development By BuiQuocAnh</p>
+            </div>
         </div>
 
-        <div class="nav-footer">
-
+        <div class="admin-content-wrapper">
+            <div class="wrapper-top">
+                <ul>
+                    <li><i class="fa-solid fa-circle-left"></i></li>
+                    <li><i class="fa-solid fa-circle-right"></i></li>
+                </ul>
+                <div class="profile">
+                    <p>{{ user_name }}</p>
+                </div>
+            </div>
+            <router-view></router-view>
         </div>
     </div>
-    <router-view></router-view>
+    
 
 </template>
 
 <script>
     export default {
-       name: 'LayoutAdmin'
+        name: 'LayoutAdmin',
+        data: function () {
+            return {
+                user_name: null,
+                user_email: null,
+            }
+        },
+        created() {
+            let user = JSON.parse(localStorage.getItem('USER'));
+            
+            this.user_name = user.name;
+            this.user_email = user.email;
+        },
     }
 
     
