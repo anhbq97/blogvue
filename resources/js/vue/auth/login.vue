@@ -64,21 +64,6 @@ export default {
             console.log(error);
         })
     },
-    logout() {
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}` 
-        axios.post("http://cms.poorclu.local/api/v1/auth/logout", {
-        })
-        .then((response) => {
-            console.log(response)
-            commit('logout')
-            return response;
-        });
-    },
-    test() {
-      axios.get('http://cms.poorclu.local/api/test').then(response => {
-        console.log(response)
-      });
-    }
   }
 }
 </script>

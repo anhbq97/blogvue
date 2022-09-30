@@ -89,14 +89,16 @@ class AuthController extends Controller
     {
         $response = [
             'data' => [],
-            'message' => 'Logout fails'
+            'code' => 400,
+            'error_code' => 0,
+            'message' => 'Something Wrong!'
         ];
 
-        // $request->user()->currentAccessToken()->delete();
         $user = Auth::user();
         $user->currentAccessToken()->delete();
 
         $response['message'] = 'Logout success. Bye ' . $request->user()->name;
+        $response['code'] = 200;
 
         return response()->json($response);
     }

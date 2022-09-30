@@ -36,6 +36,7 @@ Route::group(['prefix' => 'v1'], function() {
     ->as('auth.')
     ->group(function () {
         Route::post('/login', 'login')->name('login');
+        Route::post('/logout', 'logout')->name('logout')->middleware('auth:sanctum');
     });
 });
     

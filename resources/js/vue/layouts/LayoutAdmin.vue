@@ -2,7 +2,7 @@
     <div class="admin">
         <div class="admin-nav-wrapper">
             <div class="header">
-                <h5>CMS BLOG</h5>
+                <router-link to="/">CMS BLOG</router-link>
             </div>
 
             <div class="slice">
@@ -53,15 +53,15 @@
                     <li class="item"><router-link to="/setting/blog"><i class="fa-solid fa-gear"></i> Blog</router-link></li>
                     <li class="item">
                         <div class="logout">
-                            <p class="btn btn-danger">Logout</p>
+                            <p class="btn btn-danger" @click.prevent="logout()">Logout</p>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="footer">
+            <!-- <div class="footer">
                 <p>Designer and Development By BuiQuocAnh</p>
-            </div>
+            </div> -->
         </div>
 
         <div class="admin-content-wrapper">
@@ -96,6 +96,19 @@
             this.user_name = user.name;
             this.user_email = user.email;
         },
+        methods: {
+            logout() {
+                axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('TOKEN')}` 
+                axios.post(process.env.MIX_APP_URL_LOCAL + '/api/v1/auth/logout', {
+                })
+                .then((response) => {
+                    if (response.data.code == 200) {
+                        localStorage.clear();
+                        this.$router.push('/');
+                    }
+                });
+            },
+        }
     }
 
     
