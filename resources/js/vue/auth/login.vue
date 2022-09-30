@@ -38,8 +38,8 @@ export default {
   
   data: function () {
     return {
-        email: 'bquocanh.97@gmail.com',
-        password: 'H40th13npr0.',
+        email: '',
+        password: '',
         message: '',
         code: 0
     }
