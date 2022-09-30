@@ -95,10 +95,11 @@ class AuthController extends Controller
         ];
 
         $user = Auth::user();
-        $user->currentAccessToken()->delete();
-
-        $response['message'] = 'Logout success. Bye ' . $request->user()->name;
-        $response['code'] = 200;
+        
+        if ($user->currentAccessToken()->delete()) {
+            $response['message'] = 'Logout success. Bye ' . $request->user()->name;
+            $response['code'] = 200;
+        }
 
         return response()->json($response);
     }
