@@ -67,7 +67,6 @@ const auth = {
 };
 
 router.beforeEach((to, from, next) => {
-  console.log(to.name);
   if (to.meta.requiresAuth && !auth.isLoggedIn()) {
     next({ name: 'Login' });
   } else if (auth.isLoggedIn() && (to.name == 'Login' || to.name == 'Register')) {

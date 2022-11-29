@@ -56,7 +56,7 @@
         },
         methods: {
             getListPost(page) {
-                axios.get('api/posts?page=' + page).then(response => {
+                axios.get('api/post/list?page=' + page).then(response => {
                     this.posts = response.data.data.data,
                     this.pagination = response.data.pagination
                     this.isActived();
