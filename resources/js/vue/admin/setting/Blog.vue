@@ -1,11 +1,11 @@
 <template>
-    <p>Setting Blog</p>
+  <p>Setting Blog</p>
 </template>
 
 <script>
-    export default {
-       name: 'SettingBLog'
-    }
+  export default {
+     name: 'SettingBLog'
+  }
 
-    
+  
 </script>
