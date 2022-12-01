@@ -28,7 +28,7 @@
 
 <script>
     import axios from 'axios';
-    import Post from './Post.vue';
+    import Post from './post.vue';
 
     export default {
         name: 'Posts',
