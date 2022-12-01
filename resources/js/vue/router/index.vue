@@ -1,13 +1,13 @@
 <script>
-import Login from '../auth/Login.vue'
-import About from '../home/About.vue'
-import Register from '../auth/Register.vue'
-import Home from '../home/Index.vue'
-import NotFound from '../pages/NotFound.vue'
-import ReadPost from '../home/includes/ReadPost.vue'
-import Dashboard from '../admin/dashboard/Index.vue'
-import SettingProfile from '../admin/setting/Profile.vue'
-import SettingBlog from '../admin/setting/Blog.vue'
+import Login from '../auth/login.vue'
+import About from '../home/about.vue'
+import Register from '../auth/register.vue'
+import Home from '../home/index.vue'
+import NotFound from '../pages/notFound.vue'
+import ReadPost from '../home/includes/readPost.vue'
+import Dashboard from '../admin/dashboard/index.vue'
+import SettingProfile from '../admin/setting/profile.vue'
+import SettingBlog from '../admin/setting/blog.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
