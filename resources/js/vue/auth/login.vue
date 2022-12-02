@@ -1,5 +1,9 @@
 <template>
   <div class="container">
+    <div class="wrap-login">
+      
+    </div>
+    
     <div class="row">
       <div class="col-md-4 offset-4">
         <h4>Login</h4>
@@ -9,6 +13,7 @@
       <button v-if="code == 200" class="alert alert-success">{{ message }}</button>
       <button v-else class="alert alert-danger">{{ message }}</button>
     </div>
+
     <div class="row">
       <div class="col-md-4 offset-4">
         <form action="/action_page.php">

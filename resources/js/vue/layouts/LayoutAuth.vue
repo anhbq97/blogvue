@@ -6,6 +6,4 @@
     export default {
        name: 'LayoutAuth'
     }
-
-    
 </script>

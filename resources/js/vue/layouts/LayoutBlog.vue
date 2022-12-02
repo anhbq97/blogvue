@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Posts from '../home/includes/Posts.vue'
-import Footer from '../home/includes/Footer.vue'
-import Menu from '../home/includes/Menu.vue'
+import Posts from '../home/includes/posts.vue'
+import Footer from '../home/includes/footer.vue'
+import Menu from '../home/includes/menu.vue'
 
 export default {
     name: 'LayoutBlog',

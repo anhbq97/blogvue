@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import Posts from './includes/Posts.vue'
+    import Posts from './includes/posts.vue'
     
     export default {
         components: {
